@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anu HTML Forms</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div
+        id="myForm"
+        class="border w-75"        
+      >
+        <div
+          class="row  mt-2 justify-content-center fs-4 fw-semibold border align-items-center"         
+        >Payment form example</div>
+        <div
+          class="row text-primary-emphasis border rounded-3 m-2"         
+        >
+          <span
+            class="text-danger border border-danger-subtle bg-danger-subtle fw-semibold rounded-1"
+            style=" font-size: 15px;"
+            >Some fields are missing</span
+          >
+        </div>
+        <!--Card Info-->
+        <div
+          class="row text-primary-emphasis border rounded-3 m-2"
+      
+        >
+          <div class="d-flex flex-row">
+            <div class="mb-3">
+              <label for="Input-cardNo" class="form-label">card#</label>
+              <input
+                type="number"
+                id="Input-CardNo"
+                class="form-control"
+                placeholder="xxxxxxxxxxxxxxxx"
+                aria-describedby="cardNo"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Input-cvcNo" class="form-label">cvc#</label>
+              <input
+                type="number"
+                id="Input-cvcNo"
+                class="form-control"
+                placeholder="0000"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Input-amount" class="form-label">Amount</label>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <input
+                  type="text"
+                  id="nput-amount"
+                  class="form-control"
+                  aria-label="Amount (to the nearest dollar)"
+                />
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---Personal Info-->
+        <div
+          class="row text-success border m-2"
+       
+        >
+          <form>
+            <div class="mb-3">
+              <label for="Input-CardNo" class="form-label">First Name</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

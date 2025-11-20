@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+  <style>
+    .label { font: 14px sans-serif; fill: #222 }
+    .small { font: 12px sans-serif; fill: #333 }
+    .muted { fill: #666 }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Outer container -->
+  <rect x="40" y="30" width="920" height="340" rx="8" fill="#f8f9fa" stroke="#b7c0c7" />
+  <text x="60" y="55" class="label">Container (e.g. .container)</text>
+
+  <!-- Row with negative margins visualization -->
+  <!-- row background spans full container width -->
+  <rect x="60" y="85" width="880" height="120" fill="#ffffff" stroke="#d1d7de" />
+  <text x="70" y="105" class="small">Row (.row) — applies negative horizontal margins to create gutters</text>
+
+  <!-- Two cols inside row -->
+  <!-- Show negative margin by drawing row-left-gap and row-right-gap overlays -->
+  <rect x="60" y="85" width="-" height="0" fill="none" />
+
+  <!-- Left column padding (illustrated) -->
+  <rect x="80" y="115" width="360" height="60" rx="4" fill="#e9f7ff" stroke="#8fcdf7" />
+  <text x="100" y="133" class="small">Col (.col)</text>
+  <text x="100" y="151" class="muted small">has horizontal padding (gutters)</text>
+
+  <!-- Right column padding -->
+  <rect x="560" y="115" width="360" height="60" rx="4" fill="#fff6e6" stroke="#f0c36a" />
+  <text x="580" y="133" class="small">Col (.col)</text>
+  <text x="580" y="151" class="muted small">has horizontal padding (gutters)</text>
+
+  <!-- Gutter area between cols -->
+  <rect x="460" y="115" width="80" height="60" fill="#f0f2f4" stroke="#c7ccd1" />
+  <text x="470" y="147" class="small">Gutter (space between cols)</text>
+
+  <!-- Show padding inside left col: inner content area -->
+  <rect x="100" y="130" width="300" height="30" fill="#ffffff" stroke="#cfd8de" />
+  <text x="110" y="151" class="muted small">Content area (inside col padding)</text>
+
+  <!-- Arrows and labels for padding and margin -->
+  <!-- Padding arrow (left col) -->
+  <line x1="80" y1="130" x2="100" y2="130" class="arrow" />
+  <text x="45" y="127" class="small">Padding</text>
+
+  <!-- Row negative margin visual: show row edges overlapping container inner edges -->
+  <line x1="60" y1="85" x2="60" y2="205" stroke="#c0392b" stroke-width="2" />
+  <line x1="940" y1="85" x2="940" y2="205" stroke="#c0392b" stroke-width="2" />
+  <text x="760" y="100" class="small" fill="#c0392b">Row negative margins extend to container edges</text>
+
+  <!-- Margin arrow outside row -->
+  <line x1="40" y1="85" x2="60" y2="85" class="arrow" />
+  <text x="10" y="82" class="small">Outer margin (container's space)</text>
+
+  <!-- Legend box -->
+  <rect x="60" y="390" width="880" height="110" rx="6" fill="#ffffff" stroke="#d1d7de" />
+  <text x="80" y="412" class="label">Legend</text>
+  <text x="80" y="434" class="small">- .container: centers content and provides horizontal limits</text>
+  <text x="80" y="452" class="small">- .row: uses negative margins so .col paddings create gutters</text>
+  <text x="80" y="470" class="small">- .col: adds horizontal padding which offsets .row negative margins</text>
+  <text x="80" y="488" class="small">- gutter: empty space between columns (created by col padding)</text>
+
+  <!-- Notes -->
+  <text x="520" y="434" class="small">If you place content directly inside a .row (no .col),</text>
+  <text x="520" y="452" class="small">the content doesn't get the .col padding and may appear to 'bleed' past the container.</text>
+
+</svg>
