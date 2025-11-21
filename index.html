@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anu HTML Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9315e45218.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,104 +24,211 @@
     />
   </head>
   <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-      <div
-        id="myForm"
-        class="border w-75"        
-      >
-        <div
-          class="row  mt-2 justify-content-center fs-4 fw-semibold border align-items-center"         
-        >Payment form example</div>
-        <div
-          class="row text-primary-emphasis border rounded-3 m-2"         
-        >
-          <span
-            class="text-danger border border-danger-subtle bg-danger-subtle fw-semibold rounded-1"
-            style=" font-size: 15px;"
-            >Some fields are missing</span
+    <form>
+      <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="border my-auto w-75 align-items-center">
+          <div class="border bg-light fs-5 fw-bold mb-2 p-3">
+            <span class=" ">Payment form example</span>
+          </div>
+          <div
+            class="text-danger-emphasis bg-danger-subtle border border-danger-subtle fs-6 fw-semibold rounded-2 m-2"
           >
-        </div>
-        <!--Card Info-->
-        <div
-          class="row text-primary-emphasis border rounded-3 m-2"
-      
-        >
-          <div class="d-flex flex-row">
-            <div class="mb-3">
-              <label for="Input-cardNo" class="form-label">card#</label>
+            <span class="p-2">some fields are missing</span>
+          </div>
+          <!-- *************** -->
+
+          <div class=" row g-2 m-2 pb-2">
+            <div class="col-12 col-md-5">
+              <label for="InputCardNo" class="form-label">Card#</label>
               <input
                 type="number"
-                id="Input-CardNo"
-                class="form-control"
-                placeholder="xxxxxxxxxxxxxxxx"
-                aria-describedby="cardNo"
+                class="required form-control"
+                placeholder="xxxx-xxxx-xxxx-xxxx"
               />
             </div>
-            <div class="mb-3">
-              <label for="Input-cvcNo" class="form-label">cvc#</label>
+            <div class="col-12 col-md-4">
+              <label for="InputCvcNo" class="form-label">cvc#</label>
               <input
                 type="number"
-                id="Input-cvcNo"
-                class="form-control"
+                class="required form-control"
                 placeholder="0000"
               />
             </div>
-            <div class="mb-3">
-              <label for="Input-amount" class="form-label">Amount</label>
-
-              <div class="input-group mb-3">
-                <span class="input-group-text">$</span>
-                <input
-                  type="text"
-                  id="nput-amount"
-                  class="form-control"
-                  aria-label="Amount (to the nearest dollar)"
-                />
-                <span class="input-group-text">.00</span>
+            <div class="col-12 col-md-3">
+              <label for="InputAmount" class="form-label">Amount</label>
+              <div>
+                <div class="input-group-text input-group-sm">
+                  <span class="input-group-text">$</span>
+                  <input
+                    type="number"
+                    class="required form-control"
+                    placeholder="0.00"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!---Personal Info-->
-        <div
-          class="row text-success border m-2"
-       
-        >
-          <form>
-            <div class="mb-3">
-              <label for="Input-CardNo" class="form-label">First Name</label>
+
+          <!--**************** -->
+          <div class=" row g-1 m-2">
+            <div class="col-12 col-md-6  justify-content-center px-2">
+              <!--first col-->
+
+              <label for="InputName" class="form-label">First Name</label>
               <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                type="text"
+                class="form-control form-control-sm"
+                id="InputName"
+                aria-describedby="nameHelp"
               />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
+              <!-- <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div> -->
+
+              <label for="InputCity" class="form-label">city</label>
               <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
+                type="text"
+                class="form-control form-control-sm"
+                id="InputCity"
+                aria-describedby="cityHelp"
               />
+              <!-- <div id="cityHelp" class="form-text">We'll never share your city with anyone else.</div> -->
+
+              <div class="my-3">
+                <label for="">We accept</label>
+                <div class="row">
+                  <div class="col-12 col-md-6 d-flex justify-content-around bg-secondary  ms-2 ">
+                    <div class="form-check d-flex m-0 p-0">
+                      <input
+                        class="form-check-input ms-0 my-auto me-1"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault1"
+                      />
+                      <label class="form-check-label" for="radioDefault1">
+                        <i class="fa-brands fa-cc-mastercard fa-lg"></i>
+                      </label>
+                    </div>
+                    <div class="form-check d-flex  m-0 p-0">
+                      <input
+                        class="form-check-input ms-0 my-auto me-1"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label m-0" for="radioDefault2">
+                        <i class="fa-brands fa-cc-visa fa-lg"></i>
+                      </label>
+                    </div>
+                    <div class="form-check d-flex  m-0 p-0">
+                      <input
+                        class="form-check-input ms-0 my-auto me-1"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault1"
+                      />
+                      <label class="form-check-label m-0" for="radioDefault1">
+                        <i class="fa-brands fa-cc-diners-club fa-lg"></i>
+                      </label>
+                    </div>
+                    <div class="form-check d-flex  m-0 p-0">
+                      <input
+                        class="form-check-input ms-0 my-auto me-1"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label m-0" for="radioDefault2">
+                        <i class="fa-brands fa-cc-amex fa-lg"></i>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-0 col-md-6">                    
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="mb-3 form-check">
+            <div
+              class="col-12 col-md-6  justify-content-center px-2"
+            >
+              <!--second col-->
+
+              <label for="InputLastName" class="form-label">Last Name</label>
               <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
+                type="text"
+                class="form-control form-control-sm"
+                id="InputLastName"
+                aria-describedby="LastNameHelp"
               />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
+              <!-- <div id="cityHelp" class="form-text">We'll never share your city with anyone else.</div> -->
+
+              <div class="d-flex row mt-3 mx-auto  rounded-1">
+                <div class="col-12 col-md-6 mb-3">
+                  <label for="stateSelect" class="form-label">State</label>
+                  <select
+                    class="form-select form-select-sm"
+                    id="stateSelect"
+                    aria-label="select a state"
+                  >
+                    <option selected disabled>Pick a state</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="InputPostalCode" class="form-label"
+                    >Postal Code</label
+                  >
+                  <input
+                    id="InputPostalCode"
+                    type="text"
+                    class="form-control form-control-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="mx-auto my-auto  rounded-1">
+                <label for="InputPaymentNotes" class="form-label"
+                  >Message</label
+                >
+                <textarea
+                  col="80"
+                  rows="3"
+                  name="paymentNotes"
+                  class="form-control"
+                  id="InputPaymentNotes"
+                ></textarea>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </div>
+
+          <div class="d-flex border bg-light justify-content-end mt-2 p-2">
+            <!-- <div class="col-auto"> -->
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm me-2"
+              aria-label="cancel"
+            >
+              Cancel
+            </button>
+            <!-- </div> -->
+            <!-- <div class="col-auto"> -->
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              aria-label="send"
+            >
+              send
+            </button>
+            <!-- </div> -->
+          </div>
         </div>
       </div>
-    </div>
+    </form>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
